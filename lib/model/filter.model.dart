@@ -21,6 +21,8 @@ class FilterData {
         "slug": slug,
         "taxonomies": List<dynamic>.from(taxonomies.map((x) => x.toJson())),
       };
+
+  get taxonomyCounnt => taxonomies.where((element) => element.isChecked).length;
 }
 
 class Taxonomy {
